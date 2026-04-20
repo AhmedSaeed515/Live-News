@@ -14,11 +14,10 @@ class CountryScreen extends StatefulWidget {
 class _CountryScreenState extends State<CountryScreen> {
   @override
   Widget build(BuildContext context) {
-    Color? col = Colors.red.shade700;
     return Column(
       children: [
         SizedBox(
-          height: 580.h,
+          height: 500.h,
           child: ListView.separated(
             itemCount: Provider.of<HomeProvider>(context).country.length,
             scrollDirection: Axis.vertical,

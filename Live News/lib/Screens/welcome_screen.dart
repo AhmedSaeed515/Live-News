@@ -40,7 +40,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               },
             ),
             MyButton(
-              myColor: Colors.transparent,
+              myColor: Colors.red[400],
               text: "Sign up",
               myOnPressed: (){
                 Navigator.pushNamed(context,"registration");

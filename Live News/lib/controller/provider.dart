@@ -53,7 +53,7 @@ class   HomeProvider extends ChangeNotifier {
 
   String GetApi(String Valu)
   {
-    String Ap = "https://newsapi.org/v2/everything?q=$Valu&from=2022-06-26&language=ar&sortBy=popularity&apiKey=82a9a9b35948450bb47ff9869382a8dd";
+    String Ap = "https://newsapi.org/v2/everything?q=$Valu&language=ar&sortBy=popularity&apiKey=82a9a9b35948450bb47ff9869382a8dd";
     return Ap;
   }
 }

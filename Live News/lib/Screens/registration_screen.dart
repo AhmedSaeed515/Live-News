@@ -62,14 +62,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     height: 50,
                   ),
                   TextFormField(
-                    controller: emailController,
-                    key: _key,
+                    
+                   
                     keyboardType: TextInputType.emailAddress,
                     textAlign: TextAlign.center,
                     onChanged: (value) {
                       email = value;
                     },
-                    validator: validateEmail,
+                    
                     style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     decoration: const InputDecoration(
                       hintText: "Enter your Email",
@@ -91,7 +91,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     height: 14.0,
                   ),
                   TextFormField(
-                    controller: passwordController,
+                    
                     obscureText: true,
                     validator: validatePassword,
                     textAlign: TextAlign.center,
@@ -119,20 +119,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     height: 10,
                   ),
                   MyButton(
-                      text: "Register",
-                      myColor: Colors.red[400],
+                       text: "Register", myColor: Color.fromARGB(234, 255, 255, 255),
+                  textColor: Colors.red,
                       myOnPressed: () async {
                         setState(() {
                           showSpinner = true;
                         });
                         try {
-                          if (_key.currentState!.validate()) {
+                        //  if (_key.currentState!.validate()) {
                             final newUser =
                                 await _auth.createUserWithEmailAndPassword(
                                     email: email, password: password);
                             // await DatabaseServices(user_id: newUser.user!.uid).setUserData(Article(title: "", description: "", URLImage: "", url: ""));
                             Navigator.popAndPushNamed(context, "sign_in");
-                          }
+                          //}
                           setState(() {
                             showSpinner = false;
                           });

@@ -83,14 +83,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 50,
                   ),
                   TextFormField(
-                    controller: emailController,
-                    key: _key,
+                    
+                    
                     keyboardType: TextInputType.emailAddress,
                     textAlign: TextAlign.center,
                     onChanged: (value) {
                       email = value;
                     },
-                    validator: validateEmail,
+                    
                     style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     decoration: const InputDecoration(
                       hintText: "Enter your Email",
@@ -112,9 +112,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 14.0,
                   ),
                   TextFormField(
-                    controller: passwordController,
+                   
                     obscureText: true,
-                    validator: validatePassword,
+                    
                     textAlign: TextAlign.center,
                     onChanged: (value) {
                       password = value;
@@ -140,7 +140,8 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 10,
                   ),
                   MyButton(
-                  text: "Sign in", myColor: Colors.red[400]!,
+                  text: "Sign in", myColor: Color.fromARGB(234, 255, 255, 255),
+                  textColor: Colors.red,
                    myOnPressed: () async{
                     setState(() {
                       showSpinner=true;
